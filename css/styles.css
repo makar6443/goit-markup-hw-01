@@ -1,0 +1,190 @@
+body {
+    background-color: #e5e5e5;
+    font-family: 'Roboto','Verdana', 'Tahoma', sans-serif;
+    color: #757575;
+}
+
+:root {
+    --name-color: #212121;
+    --hover-color: #2196f3
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+.web, .studio{
+    font-family: 'Raleway', 'Verdana', 'Tahoma', sans-serif;
+    width: 145px;
+    height: 31px;
+    left: 215px;
+    top: 24px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.web {
+    color: var(--hover-color);
+}
+
+.studio {
+    color: #000000;
+}
+
+.navigation {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--name-color);
+}
+
+.navigation:hover, .contact:hover, .navigation:focus, .contact:focus, .current{
+    color: var(--hover-color)
+}
+
+.contact {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+
+.main-section {
+    background: #2F303A;
+    width: 1600px;
+    height: 600px;
+    left: 0px;
+    top: 80px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    width: 696px;
+    height: 120px;
+    left: 452px;
+    top: 280px;
+}
+
+.button-service {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    cursor: pointer
+}
+
+.advantages {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--name-color);
+}
+
+.advantages-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.section-item {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--name-color);
+}
+
+.teammate-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--name-color);
+}
+
+.teammate-position {
+    font-size: 16px;
+    line-height: 1.35;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.location {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #FFFFFF
+}
+
+footer {
+    background: #2F303A;
+}
+
+.studiofooter {
+    color: #FFFFFF
+}
+
+.portfolio-button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--name-color);
+    cursor: pointer
+}
+
+.portfolio-button:hover {
+    background: var(--hover-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF
+}
+
+.portfolio-item {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--name-color);
+}
+
+.portfolio-type {
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+}
