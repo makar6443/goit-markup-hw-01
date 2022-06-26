@@ -1,7 +1,8 @@
 body {
-    background-color: #e5e5e5;
+    background-color: #FFFFFF;
     font-family: 'Roboto','Verdana', 'Tahoma', sans-serif;
     color: #757575;
+    margin: 0;
 }
 
 :root {
@@ -10,41 +11,96 @@ body {
 }
 ul {
     list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, 
+a{
+    margin-top: 0;
+    margin-bottom: 0;
     text-decoration: none
 }
 
-.web, .studio{
+.section, section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}  
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+/* header */
+
+.header-logo{
     font-family: 'Raleway', 'Verdana', 'Tahoma', sans-serif;
-    width: 145px;
-    height: 31px;
-    left: 215px;
-    top: 24px;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    color: #000000;
+    margin-right: 93px
 }
 
-.web {
+.logo-accent {
     color: var(--hover-color);
 }
 
-.studio {
-    color: #000000;
+.header-section {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ececec;
+    flex-wrap: nowrap;
 }
 
-.navigation {
+.navigation-item{
+    display: inline-block;
+ }
+.navigation, .header-container, .navigation-contact{
+    display: flex;
+    align-items: center
+}
+
+.navigation-contact{
+    margin-left: auto;
+}
+
+.link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--name-color);
+    color: var(--name-color)
 }
 
-.navigation:hover, .contact:hover, .navigation:focus, .contact:focus, .current, .contact-footer:hover, .contact-footer:focus{
+.navigation-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation-contact-item:first-child {
+    margin-right: 50px;
+}
+
+
+.link:hover, 
+.contact:hover, 
+.link:focus, 
+.contact:focus, 
+.current, 
+.contact-footer:hover, 
+.contact-footer:focus{
     color: var(--hover-color)
 }
 
@@ -58,13 +114,12 @@ a {
 
 .main-section {
     background: #2F303A;
-    width: 1600px;
-    height: 600px;
-    left: 0px;
-    top: 80px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 
-h1 {
+.main-text {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -72,11 +127,11 @@ h1 {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #FFFFFF;
-    position: absolute;
     width: 696px;
     height: 120px;
     left: 452px;
     top: 280px;
+    margin: auto;
 }
 
 .button-service {
@@ -86,6 +141,7 @@ h1 {
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    border: 0;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -93,7 +149,9 @@ h1 {
     text-align: center;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    cursor: pointer
+    cursor: pointer;
+    margin-top: 30px;
+    min-width: 13px;
 }
 
 .advantages {
@@ -111,6 +169,29 @@ h1 {
     letter-spacing: 0.03em;
 }
 
+.advantages-section {
+    width: 1200px;
+    margin: auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.advantages-list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.advantages-item{
+    letter-spacing: 0.03em;
+    margin-right: 30px;
+    width: 270px;
+}
+
+.visual-section{
+    padding-top: 0
+}
+
 .section-item {
     font-weight: 700;
     font-size: 36px;
@@ -118,6 +199,42 @@ h1 {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--name-color);
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.visual-list{
+    display: flex;
+}
+
+.visual-item:not(:last-child){
+    margin-right: 30px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.section-team{
+    background-color: #f5f7fa
+}
+
+.team-list{
+    display: flex;
+}
+
+.team-unit{
+    text-align: center;
+    margin-right: 30px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    background: #FFFFFF
+}
+
+.team-img{
+    padding-bottom: 30px;
 }
 
 .teammate-name {
@@ -127,6 +244,8 @@ h1 {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--name-color);
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .teammate-position {
@@ -134,6 +253,8 @@ h1 {
     line-height: 1.35;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .location {
@@ -141,11 +262,16 @@ h1 {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF
+    color: #FFFFFF;
+    margin-bottom: 9px;
 }
+
+/* footer */
 
 footer {
     background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .contact-footer {
@@ -154,10 +280,28 @@ footer {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 9px;
 }
 
-.studiofooter {
-    color: #FFFFFF
+.footer-logo {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-family: 'Raleway', 'Verdana', 'Tahoma', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    display: block;
+}
+
+.address, .footer-contact-item:first-child {
+    margin-bottom: 9px;
+}
+
+.button-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .portfolio-button {
@@ -168,7 +312,17 @@ footer {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--name-color);
-    cursor: pointer
+    cursor: pointer;
+    padding: 6px 22px;
+    border: 0;
+}
+
+.button-item{
+    margin-right: 8px;
+}
+
+.button-item:last-child{
+    margin-right: 0px;
 }
 
 .portfolio-button:hover, .portfolio-button:focus {
@@ -183,12 +337,38 @@ footer {
     color: #FFFFFF
 }
 
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-section{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-section:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-section:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.portfolio-discription{
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 24px;
+}
+
 .portfolio-item {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--name-color);
+    margin-bottom: 4px;
 }
 
 .portfolio-type {
