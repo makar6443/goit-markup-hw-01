@@ -161,6 +161,7 @@ a{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--name-color);
+    margin-bottom: 10px;
 }
 
 .advantages-text {
@@ -170,7 +171,6 @@ a{
 }
 
 .advantages-section {
-    width: 1200px;
     margin: auto;
     padding-top: 94px;
     padding-bottom: 94px;
