@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6,
-p, 
+p,
 a{
     margin-top: 0;
     margin-bottom: 0;
@@ -77,6 +77,21 @@ a{
     margin-left: auto;
 }
 
+.navigation-contact a{
+    display: flex;
+    align-items: center;
+}
+
+.icon-contact{
+    margin-right: 10px;
+    fill: #757575;
+}
+
+.navigation-contact-item:hover .icon-contact,
+.navigation-contact-item:focus .icon-contact{
+    fill: var(--hover-color);
+}
+
 .link {
     font-weight: 500;
     font-size: 14px;
@@ -117,6 +132,17 @@ a{
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(../images/main-section.jpg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .main-text {
@@ -164,6 +190,18 @@ a{
     margin-bottom: 10px;
 }
 
+.advantage-icon{
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    background: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
 .advantages-text {
     font-size: 14px;
     line-height: 1.71;
@@ -186,6 +224,10 @@ a{
     letter-spacing: 0.03em;
     margin-right: 30px;
     width: 270px;
+}
+
+.advantages-item:last-child{
+    margin-right: 0px;
 }
 
 .visual-section{
@@ -233,6 +275,10 @@ img {
     background: #FFFFFF
 }
 
+.team-unit:last-child{
+    margin-right: 0px;
+}
+
 .team-img{
     padding-bottom: 30px;
 }
@@ -253,8 +299,79 @@ img {
     line-height: 1.35;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     margin-top: 0;
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.social-links {
+    width: 20px;
+    height: 20px;
+    fill: rgba(175, 177, 184, 1);
+}
+
+.link-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.link-area:hover,
+.link-area:focus{
+    background-color: var(--hover-color);
+}
+
+.link-area:hover .social-links,
+.link-area:focus .social-links{
+    fill: #FFFFFF
+}
+
+
+.client-list{
+    display: flex;
+}
+
+.client-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.client-item{
+    width: 106px;
+    height: 60px;
+    fill: #afb1b8;
+}
+
+.client-list li:not(:last-child){
+    margin-right: 30px;
+}
+
+.client-link:hover,
+.client-link:focus{
+    border: 2px solid var(--hover-color);
+    border-radius: 4px;
+}
+
+.client-link:hover .client-item,
+.client-link:focus .client-item{
+    fill: var(--hover-color);
 }
 
 .location {
@@ -296,6 +413,59 @@ footer {
 
 .address, .footer-contact-item:first-child {
     margin-bottom: 9px;
+}
+
+footer .container{
+    display: flex;
+}
+
+.container-footer-icons{
+    margin-top: 12px;
+    margin-left: 70px;
+}
+
+.container-footer-icons h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer-icons-list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+.footer-social-icons:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus{
+    background-color:var(--hover-color)
+}
+
+.footer-social-icon{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
 }
 
 .button-list{
@@ -347,6 +517,13 @@ footer {
     margin-bottom: 30px;
 }
 
+.portfolio-section:hover,
+.portfolio-section:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-section:nth-child(3n) {
     margin-right: 0;
 }
@@ -375,4 +552,5 @@ footer {
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.03em;
+    color: #757575;
 }
