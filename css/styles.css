@@ -87,10 +87,11 @@ a{
     fill: #757575;
 }
 
-.navigation-contact-item:hover .icon-contact,
-.navigation-contact-item:focus .icon-contact{
+.contact:hover .icon-contact,
+.contact:focus .icon-contact{
     fill: var(--hover-color);
 }
+
 
 .link {
     font-weight: 500;
@@ -191,15 +192,18 @@ a{
 }
 
 .advantage-icon{
+    width: 70px;
+    height: 70px;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 4px;
     width: 270px;
     height: 120px;
-    padding: 25px 100px;
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    background: #F5F4FA;
-    border-radius: 4px;
-    margin-bottom: 30px;
 }
 
 .advantages-text {
