@@ -39,7 +39,7 @@
                             <use href="./images/icons.svg#icon-mail"></use>
                         </svg>
                     info@devstudio.com
-                </a>
+                    </a>
                 </li>
                 <li class="navigation-contact-item">
                     <a class="contact" href="tel:+380961111111">
@@ -47,7 +47,7 @@
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>
                     +38 096 111 11 11
-                </a>
+                    </a>
                 </li>
             </ul>
         </div>        
@@ -58,7 +58,7 @@
         <section class="main-section section">
             <div class="container">
                 <h1 class="main-text">Эффективные решения для вашего бизнеса</h1>
-                <button class="button-service" type="button">Заказать услугу</button>
+                <button data-modal-open class="button-service" type="button">Заказать услугу</button>
             </div>
         </section>
         <!--our advantages-->
@@ -126,13 +126,22 @@
                 <h2 class="section-item">Чем мы занимаемся</h2>
                 <ul class="visual-list">
                     <li class="visual-item">
-                        <img src="./images/visual-example-1.jpg" width="370" alt="Фото нашей работы 1">
+                        <div>
+                            <img src="./images/visual-example-1.jpg" width="370" alt="Фото нашей работы 1">
+                            <p class="name-work">Десктопные приложения</p>
+                        </div>                
                     </li>
                     <li class="visual-item">
-                        <img src="./images/visual-example-2.jpg" width="370" alt="Фото нашей работы 2">
+                        <div>
+                            <img src="./images/visual-example-2.jpg" width="370" alt="Фото нашей работы 2">
+                            <p class="name-work">Мобильные приложения</p>
+                        </div>
                     </li>
                     <li class="visual-item">
-                        <img src="./images/visual-example-3.jpg" width="370" alt="Фото нашей работы 3">
+                        <div>
+                            <img src="./images/visual-example-3.jpg" width="370" alt="Фото нашей работы 3">
+                            <p class="name-work">Дизайнерские решения</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -386,5 +395,17 @@
             </div>
         </div>
     </footer>
+    <!--Modal window-->
+    <div data-modal class="backdrop is-hidden">
+        <div class="modal">
+            <button data-modal-close class="modal-btn">
+                <svg class="modal-icon">
+                    <use width="11" height="11" href="./images/icons.svg#icon-vector"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!--<script src="./js/modal.js"></script>-->
+    <script src="./js/modal.js"></script>
 </body>
 </html>

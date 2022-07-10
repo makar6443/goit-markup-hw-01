@@ -7,7 +7,8 @@ body {
 
 :root {
     --name-color: #212121;
-    --hover-color: #2196f3
+    --hover-color: #2196f3;
+    --animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 ul {
     list-style: none;
@@ -59,8 +60,8 @@ a{
 }
 
 .header-section {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border-bottom: 1px solid #ececec;
     flex-wrap: nowrap;
 }
@@ -75,11 +76,6 @@ a{
 
 .navigation-contact{
     margin-left: auto;
-}
-
-.navigation-contact a{
-    display: flex;
-    align-items: center;
 }
 
 .icon-contact{
@@ -98,7 +94,16 @@ a{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--name-color)
+    color: var(--name-color);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+    position: relative;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .navigation-item:not(:last-child) {
@@ -109,7 +114,6 @@ a{
     margin-right: 50px;
 }
 
-
 .link:hover, 
 .contact:hover, 
 .link:focus, 
@@ -117,8 +121,33 @@ a{
 .current, 
 .contact-footer:hover, 
 .contact-footer:focus{
-    color: var(--hover-color)
+    color: var(--hover-color);
 }
+
+
+.link::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-color);
+    opacity: 0;
+    transition: opacity 250ms var(--animation);
+}
+
+.current::after {
+    opacity: 1;
+    border-radius: 4px;
+}
+
+.link:hover::after { 
+    opacity: 1;
+    border-radius: 4px;
+}
+
 
 .contact {
     font-weight: 500;
@@ -126,6 +155,14 @@ a{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
+    
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
+
 }
 
 .main-section {
@@ -253,8 +290,33 @@ a{
     display: flex;
 }
 
+.visual-item{
+    position: relative;
+    display: block;
+}
+
 .visual-item:not(:last-child){
     margin-right: 30px;
+}
+
+.name-work{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding-top: 27px;
+
 }
 
 img {
@@ -329,6 +391,10 @@ img {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .link-area:hover,
@@ -355,12 +421,20 @@ img {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     text-align: center;
+
+    transition-property: fill, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .client-item{
     width: 106px;
     height: 60px;
     fill: #afb1b8;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .client-list li:not(:last-child){
@@ -402,6 +476,10 @@ footer {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 9px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .footer-logo {
@@ -459,6 +537,10 @@ footer .container{
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .footer-social-link:hover,
@@ -489,6 +571,10 @@ footer .container{
     cursor: pointer;
     padding: 6px 22px;
     border: 0;
+
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
 }
 
 .button-item{
@@ -514,6 +600,68 @@ footer .container{
 .portfolio-list{
     display: flex;
     flex-wrap: wrap;
+}
+
+.portfolio-list > .portfolio-section {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-link {
+    display: block;
+    text-decoration: none;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation);
+}
+
+.portfolio-link:hover .portfolio-overlay{
+    transform: translateY(0);
+}
+
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-thumb::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms var(--animation);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 250ms var(--animation);
+}
+
+.portfolio-about {
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+}
+
+.portfolio-link:hover .portfolio-thumb::before{
+    transform: translateY(0);
 }
 
 .portfolio-section{
@@ -557,4 +705,54 @@ footer .container{
     line-height: 1.875;
     letter-spacing: 0.03em;
     color: #757575;
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color:#ffffff;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 
+                0px 1px 1px rgb(0 0 0 / 14%), 
+                0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.modal-icon {
+    width: 11px;
+    height: 11px;
 }
