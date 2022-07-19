@@ -246,6 +246,7 @@ a{
     border-radius: 4px;
     width: 270px;
     height: 120px;
+    background-color: #f5f4fa;
 }
 
 .advantages-text {
@@ -815,6 +816,10 @@ footer .container{
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--animation);
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
 }
 
 .modal-btn{
@@ -841,14 +846,6 @@ footer .container{
 .modal-icon{
     width: 11px;
     height: 11px;
-}
-
-.modal-form{
-    width: 448px;
-    margin-top: 40px;
-    margin-right: auto;
-    margin-bottom: 40px;
-    margin-left: auto;
 }
 
 .modal-title{
@@ -952,14 +949,14 @@ footer .container{
 .modal-label-agree {
     position: relative;
     padding-left: 24px;
-    font-size: 14px;
+    margin-left: 10px;
+    text-align: center;
     letter-spacing: 0.03em;
     line-height: 1.7143;
 }
 
 .unchecked-icon {
     position: absolute;
-
     transform: translateY(-50%);
     top: 50%;
     left: 0;
