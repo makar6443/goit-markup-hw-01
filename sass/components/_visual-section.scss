@@ -1,0 +1,48 @@
+/* visual example */
+
+.visual-section {
+    padding-top: 0
+}
+
+.visual-section__section-item {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--name-color);
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.visual-section__visual-list {
+    display: flex;
+}
+
+.visual-section__visual-item {
+    position: relative;
+    display: block;
+}
+
+.visual-section__visual-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.visual-section__name-work {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding-top: 27px;
+}

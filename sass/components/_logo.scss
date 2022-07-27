@@ -1,0 +1,24 @@
+.header__logo {
+    font-family: 'Raleway', 'Verdana', 'Tahoma', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-right: 93px
+}
+
+.header__logo-accent, .footer__logo-accent{
+    color: var(--hover-color);
+}
+
+.footer__footer-logo {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-family: 'Raleway', 'Verdana', 'Tahoma', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    display: block;
+}
