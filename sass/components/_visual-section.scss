@@ -22,10 +22,10 @@
 .visual-section__visual-item {
     position: relative;
     display: block;
-}
 
-.visual-section__visual-item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .visual-section__name-work {

@@ -31,22 +31,23 @@ footer {
     margin-bottom: 9px;
 }
 
-.footer__contact-footer:hover,
-.footer__contact-footer:focus {
-    color: var(--hover-color);
-}
+    .footer__contact-footer {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 9px;
+    
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: var(--animation);
 
-.footer__contact-footer {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 9px;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: var(--animation);
+    &:hover,
+    &:focus {
+        color: var(--hover-color);
+    }
 }
 
 .footer__container-footer-icons {
@@ -85,11 +86,12 @@ footer {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--animation);
-}
 
-.footer__footer-social-link:hover,
-.footer__footer-social-link:focus {
-    background-color: var(--hover-color)
+
+    &:hover,
+    &:focus {
+        background-color: var(--hover-color)
+    }
 }
 
 .footer__footer-social-icon {

@@ -75,20 +75,20 @@
     transition-property: background-color, fill;
     transition-duration: 250ms;
     transition-timing-function: var(--animation);
+
+    &:hover,
+    &:focus {
+        background-color: var(--hover-color);
+    }
+
+    &:hover .section-team__social-links,
+    &:focus .section-team__social-links {
+        fill: #FFFFFF
+    }
 }
 
 .section-team__social-links {
     width: 20px;
     height: 20px;
     fill: rgba(175, 177, 184, 1);
-}
-
-.section-team__link-area:hover,
-.section-team__link-area:focus {
-    background-color: var(--hover-color);
-}
-
-.section-team__link-area:hover .section-team__social-links,
-.section-team__link-area:focus .section-team__social-links {
-    fill: #FFFFFF
 }

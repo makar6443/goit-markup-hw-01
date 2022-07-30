@@ -32,17 +32,18 @@
     transition-property: fill, border-color;
     transition-duration: 250ms;
     transition-timing-function: var(--animation);
-}
 
-.clients__client-link:hover,
-.clients__client-link:focus {
+
+&:hover,
+&:focus {
     border: 2px solid var(--hover-color);
     border-radius: 4px;
 }
 
-.clients__client-link:hover .clients__client-item,
-.clients__client-link:focus .clients__client-item {
+&:hover .clients__client-item,
+&:focus .clients__client-item {
     fill: var(--hover-color);
+}
 }
 
 .clients__client-item {
