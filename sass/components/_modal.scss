@@ -20,8 +20,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 528px;
-    height: 581px;
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%),
         0px 1px 1px rgb(0 0 0 / 14%),
@@ -29,10 +27,15 @@
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--animation);
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
+    padding: 40px;
+    @media screen and (max-width: 479px) {
+        padding: 15px;
+        width: calc(100% - 20px);
+    }
+    
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 450px;
+    }
 
 
 &__modal-btn {
@@ -171,13 +174,28 @@
 
     &__label-agree {
         position: relative;
-        padding-left: 24px;
-        margin-left: 10px;
-        text-align: center;
-        letter-spacing: 0.03em;
-        line-height: 1.7143;
+        color: #757575;
+        line-height: 1.17;
+        font-size: 12px;
+        
+        @media screen and (min-width: 420px) {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            line-height: 1.71;
+            margin-left: 14px;
+            font-size: 14px;
+        }
     }
 
+    &__agree {
+        @media screen and (max-width: 479px) {
+            text-align: center;
+        }
+    }
+    
     &__unchecked-icon {
         position: absolute;
         transform: translateY(-50%);
@@ -215,7 +233,10 @@
         transition-duration: 250ms;
         transition-timing-function: var(--animation);
     }
-
+    .modal-form__agree-text{
+        padding-left: 20px;
+        padding-right: 3px;
+    }
 
     .checkbox:checked~&__checked-icon {
         opacity: 1;

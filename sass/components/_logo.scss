@@ -5,7 +5,10 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #000000;
-    margin-right: 93px
+    @media screen and (min-width: 1200px) {
+            font-size: 26px;
+            line-height: 1.2;
+        }
 }
 
 .header__logo-accent, .footer__logo-accent{
@@ -21,4 +24,8 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     display: block;
+    @media screen and (min-width: 1200px) {
+            font-size: 26px;
+            line-height: 1.2;
+        }
 }
