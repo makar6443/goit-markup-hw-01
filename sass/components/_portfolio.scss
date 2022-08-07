@@ -30,6 +30,8 @@
     cursor: pointer;
     padding: 6px 22px;
     border: 0;
+    border-radius: 4px;
+    background: #F5F4FA;
 
     transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
@@ -52,6 +54,7 @@
     &--current {
         background-color: var(--hover-color);
         color: #FFFFFF;
+        border-radius: 4px;
     }
 }
 
