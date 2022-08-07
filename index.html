@@ -19,13 +19,17 @@
     <header class="header">
         <div class="header__inner container">
             <a class="header__logo" lang="en" href="index.html"><span class="header__logo-accent">Web</span>Studio</a> 
-            <button class="header__button" type="button" data-menu-button aria-controls="mobile-container">
+            <button class="header__button js-open-menu" type="button" data-menu-button aria-controls="mobile-container">
                 <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                     <use class="icon-menu-open" href="./images/icons.svg#icon-mobile-menu"></use>
-                    <use class="icon-menu-close" href="./images/icons.svg#icon-mobile-menu-close"></use>
                 </svg>
             </button>
-            <div class="mobile-container" id="mobile-container" data-menu>
+            <div class="mobile-container js-menu-container" id="mobile-container" data-menu>
+                <button class="header__button_close js-close-menu" type="button" data-menu-button aria-controls="mobile-container">
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu-close" href="./images/icons.svg#icon-mobile-menu-close"></use>
+                    </svg>
+                </button>
             <nav class="header__navigation">
             <ul class="header__navigation-list">
                 <li class="header__navigation-item">
@@ -144,7 +148,7 @@
             </div>
         </section>
         <!--visual example-->
-        <section class="visual-section reviews">
+        <section class="visual-section section reviews">
             <div class="container">
                 <h2 class="visual-section__section-item">Чем мы занимаемся</h2>
                 <ul class="visual-section__visual-list">

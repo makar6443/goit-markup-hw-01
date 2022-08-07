@@ -38,14 +38,15 @@
 
     @media screen and (max-width: 767px) {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
         background-color: white;
         text-align: center;
         padding: 48px 40px;
-        z-index: 900;
+        z-index: 100;
     }
 
     @media screen and (min-width: 768px) {
