@@ -13,7 +13,6 @@
    min-height: 60px;
 
       @media screen and (max-width: 767px) {
-         width: 100%;
          justify-content: space-between;
       }
    }
@@ -70,10 +69,6 @@
 }
 
 .header__navigation{
-   @media screen and (max-width: 767px) {
-         margin-bottom: 306px;
-      }
-   
       @media screen and (min-width: 767px) {
          margin-left: 88px;
          margin-bottom: 0px;
@@ -87,7 +82,7 @@
 
 .header__navigation-contact{
    @media screen and (max-width: 767px) {
-         margin-bottom: 64px;
+         margin-top: auto;
       }
    display: flex;
    flex-direction: column-reverse;
@@ -272,7 +267,7 @@
 
 .header__social-list {
    display: flex;
-
+   margin-top: 64px;
    @media screen and (max-width: 377px) {
       flex-wrap: wrap;
       row-gap: 10px;
