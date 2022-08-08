@@ -455,7 +455,7 @@ img {
   fill: var(--hover-color);
 }
 
-.header__button_close {
+.header__button-close {
   position: fixed;
   top: 10px;
   right: 15px;
@@ -467,11 +467,11 @@ img {
   z-index: 991;
 }
 @media screen and (min-width: 768px) {
-  .header__button_close {
+  .header__button-close {
     display: none;
   }
 }
-.header__button_close:hover .icon-menu-close, .header__button_close:hover .icon-menu-open {
+.header__button-close:hover .icon-menu-close, .header__button-close:hover .icon-menu-open {
   fill: var(--hover-color);
 }
 
